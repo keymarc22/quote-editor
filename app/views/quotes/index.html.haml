@@ -1,6 +1,8 @@
 %main.container
-  %header.header
-    %h1 Quotes
-    = link_to "New quote", new_quote_path, class: "btn btn--primary"
+  = turbo_frame_tag "first_turbo_frame" do
+    %header.header
+      %h1 Quotes
+      = link_to "New quote", new_quote_path, class: "btn btn--primary"
 
-  = render @quotes
+  %section.quotes
+    = render @quotes
