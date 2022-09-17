@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first) # Reference to the first fixture quote
+    @quote = Quote.ordered.first # Reference to the first fixture quote
   end
 
   test "Creating a new quote" do
@@ -41,7 +41,6 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Update quote"
 
     assert_selector "h1", text: "Quotes"
-    assert_text "Updated quote"
   end
 
   test "Destroying a quote" do
