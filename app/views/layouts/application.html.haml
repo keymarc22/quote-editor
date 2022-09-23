@@ -9,4 +9,8 @@
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
     = render "layouts/navbar"
+
+    .flash#flash
+      = render "layouts/flash"
+
     = yield
