@@ -7,6 +7,13 @@ SimpleForm.setup do |config|
     b.use :input, class: "form__input", error_class: "form__input--invalid"
   end
 
+  config.wrappers :boolean, class: "form__boolean" do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label
+    b.use :input, class: "form__input", error_class: "form__input--invalid"
+  end
+
   # Default configuration
   config.generate_additional_classes_for = []
   config.default_wrapper                 = :default
