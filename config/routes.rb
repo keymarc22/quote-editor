@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'quotes#index'
+  devise_for :users
+  root to: "pages#index"
 
   resources :quotes
+  resources :pages, only: :index
 end
