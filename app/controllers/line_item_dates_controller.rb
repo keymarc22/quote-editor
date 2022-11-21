@@ -1,6 +1,6 @@
 class LineItemDatesController < ApplicationController
   before_action :set_quote
-  before_action :set_line_item_date, only: [:edit, :update, :destroy]
+  before_action :set_line_item_date, except: %i[new create]
 
   def new
     @line_item_date = @quote.line_item_dates.build
@@ -32,6 +32,8 @@ class LineItemDatesController < ApplicationController
     end
   end
 
+  def show; end
+
   def destroy
     @line_item_date.destroy
 
@@ -43,15 +45,15 @@ class LineItemDatesController < ApplicationController
 
   private
 
-  def set_line_item_date
-    @line_item_date = @quote.line_item_dates.find(params[:id])
-  end
+    def set_line_item_date
+      @line_item_date = @quote.line_item_dates.find(params[:id])
+    end
 
-  def line_item_date_params
-    params.require(:line_item_date).permit(:date)
-  end
+    def line_item_date_params
+      params.require(:line_item_date).permit(:date)
+    end
 
-  def set_quote
-    @quote = current_company.quotes.find(params[:quote_id])
-  end
+    def set_quote
+      @quote = current_company.quotes.find(params[:quote_id])
+    end
 end
