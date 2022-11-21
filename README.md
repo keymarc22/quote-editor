@@ -1,24 +1,7 @@
-# README
+# Turbo Practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Quote editor
+![image](https://user-images.githubusercontent.com/60714375/203140102-609b7ef5-4313-4b93-b2eb-14d6c0bf8180.png)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+With items
+![image](https://user-images.githubusercontent.com/60714375/203140257-6c407a26-5660-46ec-a312-8988e50cef66.png)
